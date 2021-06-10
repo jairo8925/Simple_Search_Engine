@@ -1,5 +1,6 @@
 package search;
 
+import java.io.*;
 import java.util.*;
 
 public class Main {
@@ -7,8 +8,12 @@ public class Main {
     static final Scanner scanner = new Scanner(System.in);
     static final List<String> dataset = new ArrayList<>();
 
-    public static void main(String[] args) {
-        populateDataset();
+    public static void main(String[] args) throws IOException {
+        if (args.length == 2) {
+            inputDataset(args[1]);
+        } else {
+            populateDataset();
+        }
 
         while (true) {
             System.out.println("=== Menu ===");
@@ -38,6 +43,16 @@ public class Main {
                     System.out.println();
             }
         }
+    }
+
+    public static void inputDataset(String filename) throws IOException {
+        FileInputStream fstream = new FileInputStream(filename);
+        BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+        String strLine;
+        while ((strLine = br.readLine()) != null) {
+            dataset.add(strLine);
+        }
+        fstream.close();
     }
 
     public static void populateDataset() {
