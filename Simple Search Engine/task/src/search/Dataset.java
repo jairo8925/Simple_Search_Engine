@@ -20,14 +20,16 @@ public class Dataset {
         return this.dataset;
     }
 
-    void inputDataset(String filename) throws IOException {
-        FileInputStream fstream = new FileInputStream(filename);
-        BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
-        String strLine;
-        while ((strLine = br.readLine()) != null) {
-            dataset.add(strLine);
+    void inputDataset(String filename) {
+        try (FileInputStream fstream = new FileInputStream(filename)) {
+            BufferedReader br = new BufferedReader(new InputStreamReader(fstream));
+            String strLine;
+            while ((strLine = br.readLine()) != null) {
+                dataset.add(strLine);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        fstream.close();
     }
 
     void populateDataset() {
