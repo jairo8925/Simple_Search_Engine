@@ -16,11 +16,11 @@ public class Dataset {
     }
 
     List<String> getDataset() {
-        return new ArrayList<>(this.dataset);
+        return this.dataset;
     }
 
     Map<String, TreeSet<Integer>> getWordsToIndices() {
-        return new TreeMap<>(this.wordsToIndices);
+        return this.wordsToIndices;
     }
 
     /** Populate dataset through text file */

@@ -1,9 +1,6 @@
 package search;
 
-import java.util.List;
-import java.util.Map;
-import java.util.Scanner;
-import java.util.TreeSet;
+import java.util.*;
 
 public class Controller {
 
@@ -52,17 +49,91 @@ public class Controller {
     }
 
     private void findPerson() {
+        System.out.println("Select a matching strategy: ALL, ANY, NONE");
+        String strategy = scanner.nextLine();
+        System.out.println();
         System.out.println("Enter a name or email to search all suitable people.");
         String query = scanner.nextLine();
-        if (wordsToIndices.containsKey(query)) {
-            TreeSet<Integer> indices = wordsToIndices.get(query);
-            System.out.println(indices.size() + " persons found:");
-            for (Integer i : indices) {
-                System.out.println(dataset.get(i));
+        System.out.println();
+
+        List<String> results;
+
+        switch (strategy) {
+            case "ALL":
+                results = findAll(query);
+                break;
+            case "ANY":
+                results = findAny(query);
+                break;
+            case "NONE":
+                results = findNone(query);
+                break;
+            default:
+                throw new IllegalStateException("Unexpected value: " + strategy);
+        }
+
+        if (results.size() > 0) {
+            System.out.println(results.size() + " persons found:");
+            for (String result : results) {
+                System.out.println(result);
             }
         } else {
             System.out.println("No matching people found.");
         }
         System.out.println();
+    }
+
+    private List<String> findAll(String query) {
+        String[] words = query.trim().split("\\s+");
+        List<String> results = new ArrayList<>();
+
+        if (wordsToIndices.containsKey(words[0])) {
+            TreeSet<Integer> indices = wordsToIndices.get(words[0]);
+            for (Integer i : indices) {
+                String result = dataset.get(i);
+                results.add(result);
+                List<String> wordsInResult = Arrays.asList(result.trim().split("\\s+"));
+                for (String word : words) {
+                    if (!wordsInResult.contains(word)) {
+                        results.remove(result);
+                        break;
+                    }
+                }
+            }
+        }
+
+        return results;
+    }
+
+    private List<String> findAny(String query) {
+        String[] words = query.trim().split("\\s+");
+        List<String> results = new ArrayList<>();
+
+        for (String word : words) {
+            if (wordsToIndices.containsKey(word)) {
+                TreeSet<Integer> indices = wordsToIndices.get(word);
+                for (Integer i : indices) {
+                    results.add(dataset.get(i));
+                }
+            }
+        }
+
+        return results;
+    }
+
+    private List<String> findNone(String query) {
+        String[] words = query.trim().split("\\s+");
+        List<String> results = new ArrayList<>(dataset);
+
+        for (String word : words) {
+            if (wordsToIndices.containsKey(word)) {
+                TreeSet<Integer> indices = wordsToIndices.get(word);
+                for (Integer i : indices) {
+                    results.remove(dataset.get(i));
+                }
+            }
+        }
+
+        return results;
     }
 }
