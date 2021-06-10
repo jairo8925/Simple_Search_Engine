@@ -1,15 +1,19 @@
 package search;
 
 import java.util.List;
+import java.util.Map;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Controller {
 
-    private static final Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
     private final List<String> dataset;
+    private final Map<String, TreeSet<Integer>> wordsToIndices;
 
-    public Controller(List<String> dataset) {
+    public Controller(List<String> dataset, Map<String, TreeSet<Integer>> wordsToIndices) {
         this.dataset = dataset;
+        this.wordsToIndices = wordsToIndices;
     }
 
     void startProgram() {
@@ -50,14 +54,13 @@ public class Controller {
     private void findPerson() {
         System.out.println("Enter a name or email to search all suitable people.");
         String query = scanner.nextLine();
-        boolean found = false;
-        for(String data : dataset) {
-            if (data.toLowerCase().contains(query.toLowerCase())) {
-                System.out.println(data);
-                found = true;
+        if (wordsToIndices.containsKey(query)) {
+            TreeSet<Integer> indices = wordsToIndices.get(query);
+            System.out.println(indices.size() + " persons found:");
+            for (Integer i : indices) {
+                System.out.println(dataset.get(i));
             }
-        }
-        if (!found) {
+        } else {
             System.out.println("No matching people found.");
         }
         System.out.println();

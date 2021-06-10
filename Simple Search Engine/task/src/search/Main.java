@@ -1,8 +1,5 @@
 package search;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
-
 public class Main {
     public static void main(String[] args) {
         Dataset dataset = new Dataset();
@@ -11,7 +8,7 @@ public class Main {
         } else {
             dataset.populateDataset();
         }
-        Controller controller = new Controller(dataset.getDataset());
+        Controller controller = new Controller(dataset.getDataset(), dataset.getWordsToIndices());
         controller.startProgram();
     }
 }

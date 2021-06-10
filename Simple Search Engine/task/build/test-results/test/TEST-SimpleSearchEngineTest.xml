@@ -1,111 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="SimpleSearchEngineTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2021-06-10T05:12:39" hostname="DESKTOP-JAIRO" time="0.169">
+<testsuite name="SimpleSearchEngineTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2021-06-10T07:52:17" hostname="DESKTOP-JAIRO" time="0.245">
   <properties/>
-  <testcase name="start" classname="SimpleSearchEngineTest" time="0.169">
-    <failure message="java.lang.AssertionError: Wrong answer in test #5&#10;&#10;Search result is not equal to the expected search&#10;&#10;Please find below the output of your program during this failed test.&#10;Note that the '&gt;' character indicates the beginning of the input line.&#10;&#10;---&#10;&#10;Arguments: --data names.txt&#10;&#10;=== Menu ===&#10;1. Search information.&#10;2. Print all people&#10;0. Exit&#10;&gt; 1&#10;&#10;Enter a name or email to search all suitable people.&#10;&gt; @&#10;Fernando Marbury fernando_marbury@gmail.com&#10;Kristyn Nix nix-kris@gmail.com&#10;Bob Yeh bobyeah@gmail.com&#10;Shannan Bob stropeshah@gmail.com&#10;Margene Resendez marres@gmail.com&#10;Teri Ledet teri_ledet@gmail.com&#10;Dana Baron baron@gmail.com&#10;Pasquale Gallien gallien@evilcorp.com&#10;Gerardo Strouth gallien@evilcorp.com&#10;Angelita Wigington gallien@evilcorp.com&#10;Remi Malek fsociefy@gmail.com&#10;Demetria Hostetler gallien@evilcorp.com&#10;Victorina Froehlich victory@gmail.com&#10;Erica Radford hisam@gmail.com&#10;&#10;=== Menu ===&#10;1. Search information.&#10;2. Print all people&#10;0. Exit&#10;&gt; 1&#10;&#10;Enter a name or email to search all suitable people.&#10;&gt; Leopold&#10;Yer Leopold&#10;Alexis Leopold&#10;Drema Leopold&#10;&#10;=== Menu ===&#10;1. Search information.&#10;2. Print all people&#10;0. Exit&#10;&gt; 0&#10;&#10;Bye!" type="java.lang.AssertionError">java.lang.AssertionError: Wrong answer in test #5
-
-Search result is not equal to the expected search
-
-Please find below the output of your program during this failed test.
-Note that the '&gt;' character indicates the beginning of the input line.
-
----
-
-Arguments: --data names.txt
-
-=== Menu ===
-1. Search information.
-2. Print all people
-0. Exit
-&gt; 1
-
-Enter a name or email to search all suitable people.
-&gt; @
-Fernando Marbury fernando_marbury@gmail.com
-Kristyn Nix nix-kris@gmail.com
-Bob Yeh bobyeah@gmail.com
-Shannan Bob stropeshah@gmail.com
-Margene Resendez marres@gmail.com
-Teri Ledet teri_ledet@gmail.com
-Dana Baron baron@gmail.com
-Pasquale Gallien gallien@evilcorp.com
-Gerardo Strouth gallien@evilcorp.com
-Angelita Wigington gallien@evilcorp.com
-Remi Malek fsociefy@gmail.com
-Demetria Hostetler gallien@evilcorp.com
-Victorina Froehlich victory@gmail.com
-Erica Radford hisam@gmail.com
-
-=== Menu ===
-1. Search information.
-2. Print all people
-0. Exit
-&gt; 1
-
-Enter a name or email to search all suitable people.
-&gt; Leopold
-Yer Leopold
-Alexis Leopold
-Drema Leopold
-
-=== Menu ===
-1. Search information.
-2. Print all people
-0. Exit
-&gt; 0
-
-Bye!
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.hyperskill.hstest.stage.StageTest.start(StageTest.java:141)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:50)
-	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
-	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:47)
-	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
-	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:325)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:78)
-	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:57)
-	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
-	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
-	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
-	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
-	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
-	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.runTestClass(JUnitTestClassExecutor.java:110)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:58)
-	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecutor.execute(JUnitTestClassExecutor.java:38)
-	at org.gradle.api.internal.tasks.testing.junit.AbstractJUnitTestClassProcessor.processTestClass(AbstractJUnitTestClassProcessor.java:62)
-	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33)
-	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94)
-	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
-	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:119)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36)
-	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:182)
-	at org.gradle.internal.remote.internal.hub.MessageHubBackedObjectConnection$DispatchWrapper.dispatch(MessageHubBackedObjectConnection.java:164)
-	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:414)
-	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
-	at org.gradle.internal.concurrent.ManagedExecutorImpl$1.run(ManagedExecutorImpl.java:48)
-	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
-	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
-	at org.gradle.internal.concurrent.ThreadFactoryImpl$ManagedThreadRunnable.run(ThreadFactoryImpl.java:56)
-	at java.base/java.lang.Thread.run(Thread.java:834)
-</failure>
-  </testcase>
+  <testcase name="start" classname="SimpleSearchEngineTest" time="0.245"/>
   <system-out><![CDATA[?[1;31m
 Start test 1?[0m
 === Menu ===
@@ -202,6 +98,7 @@ Start test 3?[0m
 
 Enter a name or email to search all suitable people.
 > Leopold
+3 persons found:
 Yer Leopold
 Alexis Leopold
 Drema Leopold
@@ -231,6 +128,7 @@ Incorrect option! Try again.
 
 Enter a name or email to search all suitable people.
 > Bob
+5 persons found:
 Bob Yeh bobyeah@gmail.com
 Shannan Bob stropeshah@gmail.com
 Carlene Bob
@@ -361,6 +259,7 @@ Elyse Pauling
 
 Enter a name or email to search all suitable people.
 > Leopold
+3 persons found:
 Yer Leopold
 Alexis Leopold
 Drema Leopold
@@ -382,20 +281,7 @@ Start test 5?[0m
 
 Enter a name or email to search all suitable people.
 > @
-Fernando Marbury fernando_marbury@gmail.com
-Kristyn Nix nix-kris@gmail.com
-Bob Yeh bobyeah@gmail.com
-Shannan Bob stropeshah@gmail.com
-Margene Resendez marres@gmail.com
-Teri Ledet teri_ledet@gmail.com
-Dana Baron baron@gmail.com
-Pasquale Gallien gallien@evilcorp.com
-Gerardo Strouth gallien@evilcorp.com
-Angelita Wigington gallien@evilcorp.com
-Remi Malek fsociefy@gmail.com
-Demetria Hostetler gallien@evilcorp.com
-Victorina Froehlich victory@gmail.com
-Erica Radford hisam@gmail.com
+No matching people found.
 
 === Menu ===
 1. Search information.
@@ -405,9 +291,238 @@ Erica Radford hisam@gmail.com
 
 Enter a name or email to search all suitable people.
 > Leopold
+3 persons found:
 Yer Leopold
 Alexis Leopold
 Drema Leopold
+
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 0
+
+Bye!
+?[1;31m
+Start test 6?[0m
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 0
+
+Bye!
+?[1;31m
+Start test 7?[0m
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 1
+
+Enter a name or email to search all suitable people.
+> this text never find some match
+No matching people found.
+
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 0
+
+Bye!
+?[1;31m
+Start test 8?[0m
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 1
+
+Enter a name or email to search all suitable people.
+> h
+No matching people found.
+
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 1
+
+Enter a name or email to search all suitable people.
+> gallien@evilcorp.com
+4 persons found:
+Pasquale Gallien gallien@evilcorp.com
+Gerardo Strouth gallien@evilcorp.com
+Angelita Wigington gallien@evilcorp.com
+Demetria Hostetler gallien@evilcorp.com
+
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 0
+
+Bye!
+?[1;31m
+Start test 9?[0m
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 4
+
+Incorrect option! Try again.
+
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 2
+
+ === List of people ===
+Kristofer Galley
+Fernando Marbury fernando_marbury@gmail.com
+Kristyn Nix nix-kris@gmail.com
+Regenia Enderle
+Malena Gray
+Colette Mattei
+Wendolyn Mcphillips
+Jim Gray
+Coreen Beckham
+Bob Yeh bobyeah@gmail.com
+Shannan Bob stropeshah@gmail.com
+Yer Fillion
+Margene Resendez marres@gmail.com
+Blossom Ambler
+Teri Ledet teri_ledet@gmail.com
+Dana Baron baron@gmail.com
+Abram Goldsberry
+Yer Leopold
+Stefania Trunzo
+Alexis Leopold
+Carlene Bob
+Oliver Dacruz
+Jonie Richter
+Pasquale Gallien gallien@evilcorp.com
+Verdie Gentle
+Gerardo Strouth gallien@evilcorp.com
+Agripina Bob
+Latricia Niebuhr
+Malena Schommer
+Drema Leopold
+Heide Payeur
+Ranae Digiovanni
+Simona Pereira
+Nick Digiovanni
+Angelita Wigington gallien@evilcorp.com
+Elin Gray
+Dwain Trunzo
+Boris Beiler
+Remi Malek fsociefy@gmail.com
+Demetria Hostetler gallien@evilcorp.com
+Nydia Mcduffie
+Florencio Defibaugh
+Warner Giblin
+Bob Mans
+Shu Gray
+Kaycee Gray
+Victorina Froehlich victory@gmail.com
+Roseanne Gray
+Erica Radford hisam@gmail.com
+Elyse Pauling
+
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 2
+
+ === List of people ===
+Kristofer Galley
+Fernando Marbury fernando_marbury@gmail.com
+Kristyn Nix nix-kris@gmail.com
+Regenia Enderle
+Malena Gray
+Colette Mattei
+Wendolyn Mcphillips
+Jim Gray
+Coreen Beckham
+Bob Yeh bobyeah@gmail.com
+Shannan Bob stropeshah@gmail.com
+Yer Fillion
+Margene Resendez marres@gmail.com
+Blossom Ambler
+Teri Ledet teri_ledet@gmail.com
+Dana Baron baron@gmail.com
+Abram Goldsberry
+Yer Leopold
+Stefania Trunzo
+Alexis Leopold
+Carlene Bob
+Oliver Dacruz
+Jonie Richter
+Pasquale Gallien gallien@evilcorp.com
+Verdie Gentle
+Gerardo Strouth gallien@evilcorp.com
+Agripina Bob
+Latricia Niebuhr
+Malena Schommer
+Drema Leopold
+Heide Payeur
+Ranae Digiovanni
+Simona Pereira
+Nick Digiovanni
+Angelita Wigington gallien@evilcorp.com
+Elin Gray
+Dwain Trunzo
+Boris Beiler
+Remi Malek fsociefy@gmail.com
+Demetria Hostetler gallien@evilcorp.com
+Nydia Mcduffie
+Florencio Defibaugh
+Warner Giblin
+Bob Mans
+Shu Gray
+Kaycee Gray
+Victorina Froehlich victory@gmail.com
+Roseanne Gray
+Erica Radford hisam@gmail.com
+Elyse Pauling
+
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 1
+
+Enter a name or email to search all suitable people.
+> this text never gonna be matched
+No matching people found.
+
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 1
+
+Enter a name or email to search all suitable people.
+> h
+No matching people found.
+
+=== Menu ===
+1. Search information.
+2. Print all people
+0. Exit
+> 1
+
+Enter a name or email to search all suitable people.
+> gallien@evilcorp.com
+4 persons found:
+Pasquale Gallien gallien@evilcorp.com
+Gerardo Strouth gallien@evilcorp.com
+Angelita Wigington gallien@evilcorp.com
+Demetria Hostetler gallien@evilcorp.com
 
 === Menu ===
 1. Search information.
